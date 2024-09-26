@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Care Services</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: "Arial", sans-serif;
+        font-family: "Roboto", sans-serif;
         margin: 0;
         padding: 100px 0;
-        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        background: linear-gradient(
+          135deg,
+          #05386b,
+          #379683,
+          #5cdb95,
+          #8ee4af,
+          #edf5e1
+        );
         color: #333;
         text-align: center;
         overflow-x: hidden;
@@ -17,7 +28,7 @@
       header,
       footer {
         padding: 50px 0;
-        background: rgba(0, 150, 136, 0.8); /* Teal color */
+        background: rgba(5, 56, 107, 0.8); /* #05386B */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: background 0.3s;
       }
@@ -26,41 +37,43 @@
         bottom: 0;
       }
       .opaque {
-        background: rgba(0, 150, 136, 1) !important; /* Teal color */
+        background: rgba(5, 56, 107, 1) !important; /* #05386B */
       }
       header h1 {
+        font-family: "Pacifico", cursive;
         font-size: 3em;
         margin: 0;
         animation: fadeInDown 2s;
-        color: #ffffff; /* White color */
+        color: #fff; /* Белый цвет */
+      }
+      nav {
+        margin: 20px 0;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #8ee4af;
       }
       section {
         padding: 50px 20px;
+        text-align: left;
+        max-width: 800px;
+        margin: 0 auto;
       }
-      .card {
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-        padding: 20px;
-        margin: 20px;
-        display: inline-block;
-        width: 300px;
-        transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        animation: fadeInUp 1s ease-in-out, gradientAnimation 5s infinite;
+      h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #fff; /* Белый цвет */
       }
-      .card:hover {
-        transform: scale(1.05);
-        background: rgba(255, 255, 255, 1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-      .card h2 {
-        font-size: 2em;
-        margin: 0 0 10px;
-        color: #00796b; /* Dark Teal color */
-      }
-      .card p {
+      p {
         font-size: 1.2em;
-        color: #333; /* Dark Gray color */
+        color: #000; /* Черный цвет */
+        margin-bottom: 20px;
       }
       @keyframes fadeInDown {
         from {
@@ -82,65 +95,73 @@
           transform: translateY(0);
         }
       }
-      @keyframes gradientAnimation {
-        0% {
-          background: rgba(255, 255, 255, 0.9);
-        }
-        50% {
-          background: rgba(224, 242, 241, 0.9); /* Light Teal color */
-        }
-        100% {
-          background: rgba(255, 255, 255, 0.9);
-        }
-      }
       footer p {
         margin: 0;
         font-size: 1em;
-        color: #ffffff; /* White color */
+        color: #000; /* Черный цвет */
+      }
+      .block {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Welcome to Pet Care Services</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why-choose-us">Why Choose Us?</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
-    <section>
-      <div class="card">
-        <h2>Easy Booking</h2>
-        <p>Submit a request to leave your pet with us easily and quickly.</p>
-      </div>
-      <div class="card">
-        <h2>Professional Care</h2>
-        <p>Your pet will be taken care of by our professional staff.</p>
-      </div>
-      <div class="card">
-        <h2>Safe Environment</h2>
-        <p>We provide a safe and comfortable environment for your pet.</p>
-      </div>
+    <section id="services" class="block">
+      <h2>Our Services</h2>
+      <p>
+        <strong>Grooming:</strong> Keep your pet looking and feeling great with
+        our grooming services.
+      </p>
+      <p>
+        <strong>Training:</strong> Our professional trainers will help your pet
+        learn new skills and behaviors.
+      </p>
     </section>
-    <section>
+    <section id="why-choose-us" class="block">
       <h2>Why Choose Us?</h2>
-      <div class="card">
-        <h2>Experienced Staff</h2>
-        <p>
-          Our team has years of experience in pet care, ensuring your pet is in
-          good hands.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Affordable Prices</h2>
-        <p>
-          We offer competitive pricing without compromising on the quality of
-          care.
-        </p>
-      </div>
-      <div class="card">
-        <h2>24/7 Support</h2>
-        <p>
-          We are available around the clock to answer any questions or concerns
-          you may have.
-        </p>
-      </div>
+      <p>
+        <strong>Experienced Staff:</strong> Our team has years of experience in
+        pet care, ensuring your pet is in good hands.
+      </p>
+      <p>
+        <strong>Affordable Prices:</strong> We offer competitive pricing without
+        compromising on the quality of care.
+      </p>
+      <p>
+        <strong>24/7 Support:</strong> We are available around the clock to
+        answer any questions or concerns you may have.
+      </p>
+    </section>
+    <section id="testimonials" class="block">
+      <h2>Testimonials</h2>
+      <p>
+        <strong>John Doe:</strong> "Pet Care Services took excellent care of my
+        dog while I was away. Highly recommend!"
+      </p>
+      <p>
+        <strong>Jane Smith:</strong> "The staff is very friendly and
+        professional. My cat loves staying here!"
+      </p>
+    </section>
+    <section id="contact" class="block">
+      <h2>Contact Us</h2>
+      <p>
+        <strong>Email:</strong> info@petcareservices.com<br />
+        <strong>Phone:</strong> (123) 456-7890
+      </p>
     </section>
     <footer>
       <p>&copy; 2023 Pet Care Services. All rights reserved.</p>
